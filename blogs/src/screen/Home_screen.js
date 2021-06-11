@@ -10,6 +10,7 @@ import {
   FormControl,
 } from "react-bootstrap";
 import CardInfos from "../data/cardInfo";
+import BodyNav from "./bodyNav.Screen";
 
 const Home = () => {
   const img =
@@ -27,32 +28,23 @@ const Home = () => {
             <h6 className="hero-text">
               Achiever Group and research center blogs
             </h6>
-            <Form style={{ maxWidth: "30rem", margin: "2% auto" }}>
-              <FormControl type="text" placeholder="Search blogs"></FormControl>
+            <Form
+              style={{ display: "flex", maxWidth: "50rem", margin: "2% auto" }}
+            >
+              <FormControl
+                className="formControl"
+                type="text"
+                placeholder="Search blogs"
+              ></FormControl>
+              <i className="fa fa-search fa-2x" aria-hidden="true"></i>
             </Form>
           </Card.Title>
         </Card.ImgOverlay>
       </Card>
 
-      {/* 
-      <Navbar bg="light" className="navbar">
-        <Container>
-          <Nav className="space-between">
-            <Nav.Link href="#Admins">Admins</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#Students">Students</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#Teacher">Teacher</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#Users">Users</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar> */}
+      <BodyNav />
 
-      <Row xs={1} md={3}>
+      <Row xs={1} md={3} sm={2}>
         {CardInfos.map((cardInfo) => {
           console.log(cardInfo);
           const { views, likes, comments, img, title, card_text } = cardInfo;
@@ -61,16 +53,18 @@ const Home = () => {
               <Card className="card-container" key={cardInfo.id}>
                 <Card.Img variant="top" src={img} height="200em" />
                 <Card.Body>
-                  <Card.Title style={{ height: "1em" }} className="text-center">
+                  <Card.Title
+                    style={{ fontSize: "1.5em" }}
+                    className="text-center"
+                  >
                     <h3>{title}</h3>
                   </Card.Title>
-                  <Card.Text style={{ height: "0.4em" }}>{card_text}</Card.Text>
+                  <Card.Text style={{ fontSize: "1em" }}>{card_text}</Card.Text>
                 </Card.Body>
-                <Card.Footer>
-                  <Button variant="success" className="card-btn">
-                    Read
-                  </Button>
-                </Card.Footer>
+
+                <Button variant="success" className="card-btn">
+                  Read
+                </Button>
               </Card>
             </Col>
           );

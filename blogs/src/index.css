@@ -17,11 +17,17 @@ p {
 }
 .hero {
   max-height: 40em;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 .hero-text {
   color: #fff;
   font-size: 2em;
+  font-weight: 600;
   margin-top: 10%;
+  text-align: center;
+}
+@media screen {
 }
 
 .card-container {
@@ -29,8 +35,43 @@ p {
   overflow: hidden;
 }
 .card-btn {
-  margin: 1rem auto;
+  margin: 0em auto 1em auto;
   color: #34d399;
-  border-radius: 5px;
-  display: block;
+  border-radius: 20px;
+}
+
+.nav_links {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav_links li a {
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+.nav_links li a:hover {
+  color: #34d399;
+}
+.navUnderline {
+  height: 0.5em;
+  width: 100%;
+  margin-top: 0.5em;
+  background: rgb(212, 212, 212);
+}
+.navUnderline div {
+  height: 0.5em;
+  width: 17%;
+  background: #34d399;
+  transform: translateX(47%);
+}
+.formControl {
+  display: flex;
+}
+.fa-search {
+  margin-left: -3rem;
+  margin-top: 0.6rem;
 }
