@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #f7f7f7;
+}
+p {
+  background: #f7f7f7;
+  font-family: Nunito;
+  font-style: Regular;
+  font-size: 22px;
+  line-height: 30px;
+  line-height: 100%;
+  text-align: Left;
+  vertical-align: Top;
+  letter-spacing: 0.49px;
+}
+.hero {
+  max-height: 40em;
+}
+.hero-text {
+  color: #fff;
+  font-size: 2em;
+  margin-top: 10%;
+}
+
+.card-container {
+  margin-top: 2rem;
+  overflow: hidden;
+}
+.card-btn {
+  margin: 1rem auto;
+  color: #34d399;
+  border-radius: 5px;
+  display: block;
+}
