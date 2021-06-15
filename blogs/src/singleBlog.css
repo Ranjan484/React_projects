@@ -1,0 +1,111 @@
+/*///////--- global classes---//////*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: auto; */
+}
+/* font */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: hsl(209, 38%, 27%);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+  .banner-img {
+    width: 100vw;
+    height: auto;
+    filter: blur(1.5px);
+  }
+}
+
+/* //////---SINGLE BLOGS---/////// */
+
+.banner-img {
+  width: 100vw;
+  height: 20em;
+  filter: blur(1.5px);
+}
+.auther {
+  text-align: end;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  color: black;
+}
+.banner-heading {
+  font-size: 2rem;
+}
+.body-img {
+  width: 75vw;
+  max-height: 60vh;
+  display: block;
+  margin: 0 auto;
+}
+.paragraph {
+  font-size: 1rem;
+  margin: 1rem 3rem;
+  text-align: start;
+  overflow: hidden;
+}
+.list-container {
+  margin: 1.4rem 3rem;
+}

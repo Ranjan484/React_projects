@@ -1,3 +1,5 @@
+/*///////--- global classes---//////*/
+
 * {
   margin: 0;
   padding: 0;
@@ -69,9 +71,8 @@ p {
     line-height: 1;
   }
 }
-/*  global classes */
 
-/* react project */
+/*//////---BLOGS CARD---/////// */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -182,6 +183,7 @@ body {
   padding: 1rem 1rem;
   overflow: hidden;
   max-width: 28em;
+  margin-right: 0rem;
 }
 .top-container {
   height: 260px;
@@ -207,12 +209,11 @@ body {
 
 .img {
   max-height: 260px;
-  width: 28em;
+  width: 30em;
   display: block;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -229,7 +230,7 @@ p {
 }
 .btn {
   display: block;
-  margin: 0 auto;
+  margin: 0.6rem auto;
   text-transform: uppercase;
   background: transparent;
   color: #34d399;

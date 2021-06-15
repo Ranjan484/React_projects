@@ -1,5 +1,6 @@
 import CardInfos from "../data/cardInfo";
 import BodyNav from "./bodyNav.Screen";
+import { Link } from "react-router-dom";
 // import "../index.css";
 
 const Home = () => {
@@ -23,7 +24,7 @@ const Home = () => {
 export default Home;
 
 const BlogCard = (props) => {
-  const { img, title, card_text, views, comments, likes } = props;
+  const { id, banner_img, title, card_text, views, comments, likes } = props;
 
   return (
     <article className="container-items">
@@ -42,12 +43,12 @@ const BlogCard = (props) => {
             {comments}
           </li>
         </ul>
-        <img src={img} className="img" />
+        <img src={banner_img} className="img" />
       </div>
       <h2>{title}</h2>
       <p>{card_text}</p>
       <button type="button" className="btn">
-        Read
+        <Link to={`/single-blogs/${id}`}>Read</Link>
       </button>
     </article>
   );
