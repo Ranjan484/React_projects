@@ -1,5 +1,5 @@
 import CardInfos from "../data/cardInfo";
-import BodyNav from "./bodyNav.Screen";
+import BodyNav from "../components/bodyNav.Screen";
 import { Link } from "react-router-dom";
 // import "../index.css";
 
@@ -46,7 +46,7 @@ const BlogCard = (props) => {
         <img src={banner_img} className="img" />
       </div>
       <h2>{title}</h2>
-      <p>{card_text}</p>
+      <p className="card-text">{card_text}</p>
       <button type="button" className="btn">
         <Link to={`/single-blogs/${id}`}>Read</Link>
       </button>

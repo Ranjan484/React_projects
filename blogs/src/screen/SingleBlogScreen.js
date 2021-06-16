@@ -1,4 +1,5 @@
 import CardInfos from "../data/cardInfo";
+import "../singleBlog.css";
 
 const SingleBlog = ({ match }) => {
   const blog = CardInfos.find((card) => card.id === parseInt(match.params.id));
@@ -11,7 +12,9 @@ const SingleBlog = ({ match }) => {
           {blog.auther}/{new Date().getFullYear()}/{new Date().getMonth()}/
           {new Date().getDate()}
         </p>
-        <h2 className="banner-heading">"{blog.title}"</h2>
+        <div>
+          <h2 className="banner-heading">"{blog.title}"</h2>
+        </div>
       </header>
       <main>
         <p className="paragraph">
