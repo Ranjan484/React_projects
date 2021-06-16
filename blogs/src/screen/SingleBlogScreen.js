@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import CardInfos from "../data/cardInfo";
 import "../singleBlog.css";
 
@@ -90,7 +91,17 @@ const SingleBlog = ({ match }) => {
           the opportunity to work from home. We hope we convinced you to start
           learning to code. Happy coding!
         </p>
-        <div>icons</div>
+        <ul className="blog-icons">
+          <li>
+            <i className="fa fa-heart-o" aria-hidden="false"></i>
+          </li>
+          <li>
+            <i class="fa fa-commenting-o" aria-hidden="false"></i>
+          </li>
+          <li>
+            <i className="fa fa-share" aria-hidden="true"></i>
+          </li>
+        </ul>
       </main>
       {/* <div>
         <h2>related blogs</h2>

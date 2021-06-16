@@ -35,7 +35,7 @@ const BlogCard = (props) => {
             {views}
           </li>
           <li className="second-top-container">
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i className="fa fa-heart-o" aria-hidden="true"></i>
             {likes}
           </li>
           <li className="third-top-container">
