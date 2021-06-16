@@ -38,7 +38,7 @@ const SingleBlog = ({ match }) => {
         <div>
           <img src={blog.body_img} alt="sec-img" className="body-img" />
         </div>
-        <h2>Computer in every sector</h2>
+        <h2 className="blog-heading">Computer in every sector</h2>
         <p className="paragraph">
           However, there are other options other than a degree, that could
           potentially help you land a job. For instance, if you were to get a
@@ -71,7 +71,7 @@ const SingleBlog = ({ match }) => {
           </li>
           <li>One of the most depended sector of computer is busines </li>
         </ul>
-        <h2>Less programmer available </h2>
+        <h2 className="blog-heading">Less programmer available </h2>
         <p className="paragraph">
           Programming is a skill that comes with numerous benefits. Some of the
           advantages that come withIn the world of programming, it is often said
