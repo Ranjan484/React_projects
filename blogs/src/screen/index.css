@@ -182,7 +182,7 @@ body {
   border-radius: 1rem;
   padding: 1rem 1rem;
   overflow: hidden;
-  max-width: 28em;
+  /* max-width: 28em; */
   margin-right: 0rem;
 }
 .top-container {
@@ -217,9 +217,10 @@ body {
   overflow: hidden;
 }
 
-h2 {
-  font-size: 1.5rem;
+.card-title {
+  font-size: 1.3rem;
   text-align: center;
+  margin-top: 0.5rem;
 }
 .card-text {
   color: #617d98;

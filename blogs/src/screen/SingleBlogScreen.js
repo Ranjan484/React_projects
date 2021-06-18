@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import CardInfos from "../data/cardInfo";
-import "../singleBlog.css";
+import BlogCardList from "../components/BlogCard";
+import "./singleBlog.css";
 
 const SingleBlog = ({ match }) => {
   const blog = CardInfos.find((card) => card.id === parseInt(match.params.id));
@@ -13,9 +14,7 @@ const SingleBlog = ({ match }) => {
           {blog.auther}/{new Date().getFullYear()}/{new Date().getMonth()}/
           {new Date().getDate()}
         </p>
-        <div>
-          <h2 className="banner-heading">"{blog.title}"</h2>
-        </div>
+        <h2 className="banner-heading">"{blog.title}"</h2>
       </header>
       <main>
         <p className="paragraph">
@@ -103,14 +102,16 @@ const SingleBlog = ({ match }) => {
           </li>
         </ul>
       </main>
-      {/* <div>
+      <div>
         <h2>related blogs</h2>
-        <div>component 1 component 2</div>
+        <div>
+          <BlogCardList />
+        </div>
       </div>
       <footer>
         <div>comments</div>
         <div>blogs req</div>
-      </footer> */}
+      </footer>
     </>
   );
 };
