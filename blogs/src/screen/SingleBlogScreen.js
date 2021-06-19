@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import CardInfos from "../data/cardInfo";
-import BlogCardList from "../components/BlogCard";
+import RelatedBlogCardList from "../components/RelatedBlogs";
 import "./singleBlog.css";
 
 const SingleBlog = ({ match }) => {
@@ -16,7 +16,7 @@ const SingleBlog = ({ match }) => {
         </p>
         <h2 className="banner-heading">"{blog.title}"</h2>
       </header>
-      <main>
+      <div>
         <p className="paragraph">
           We’re living in the era of technology, and technological growth is
           nowhere near stopping. While one of the paths to becoming a programmer
@@ -101,13 +101,9 @@ const SingleBlog = ({ match }) => {
             <i className="fa fa-share" aria-hidden="true"></i>
           </li>
         </ul>
-      </main>
-      <div>
-        <h2>related blogs</h2>
-        <div>
-          <BlogCardList />
-        </div>
       </div>
+      <RelatedBlogCardList />
+
       <footer>
         <div>comments</div>
         <div>blogs req</div>
