@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.comment-main-container {
+  margin-top: 4rem;
+}
+.comment-input-container {
+  display: block;
+  position: relative;
+  justify-content: center;
+  margin: 4rem auto;
+  height: 4rem;
+  width: 60vw;
+}
+.comment-input {
+  display: inline;
+  position: relative;
+  left: 4rem;
+  justify-content: center;
+  height: 3rem;
+  width: 50vw;
+  border-radius: 5px;
+}
+.comment-send {
+  display: inline;
+  position: relative;
+  top: 1rem;
+  left: 1.3rem;
+  margin-top: 1rem;
+  height: auto;
+  width: 3vw;
+  border-radius: 5px;
+  background: hsl(210, 36%, 96%);
+}
+
+.comment-container {
+  margin: 2rem auto;
+  height: 10rem;
+  width: 60vw;
+  background: #fff;
+  position: relative;
+  /* border: 1px solid rgb(134, 150, 131); */
+  border-radius: 20px;
+  overflow: hidden;
+}
+.comment-person {
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: inline;
+  position: relative;
+  top: 1.5rem;
+  right: 0;
+  left: 7rem;
+  bottom: 0rem;
+}
+.comment-date {
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  top: 2rem;
+  right: 0;
+  left: 7rem;
+  bottom: 0rem;
+}
+.comment-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  top: -2.5rem;
+}
+.comment-text {
+  position: relative;
+  top: -5rem;
+  left: 7rem;
+  right: 0;
+  bottom: 0;
+}
+.comment-heart {
+  font-size: 1rem;
+  position: relative;
+  top: -6rem;
+  right: 0rem;
+  left: 46rem;
+  bottom: 0rem;
+}
+.comment-reply {
+  font-size: 1rem;
+  position: relative;
+  top: -6rem;
+  right: 0rem;
+  left: 47rem;
+  bottom: 0rem;
+}
+.comment-three-dots {
+  font-size: 1rem;
+  position: relative;
+  top: -11.8rem;
+  right: 0rem;
+  left: 46rem;
+  bottom: 0rem;
+}

@@ -1,4 +1,4 @@
-import BodyNav from "../components/bodyNav.Screen";
+import BodyNav from "../components/bodyNav";
 import BlogCardList from "../components/BlogCard";
 
 import "./index.css";

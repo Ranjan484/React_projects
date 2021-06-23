@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import CardInfos from "../data/cardInfo";
 import RelatedBlogCardList from "../components/RelatedBlogs";
 import "./singleBlog.css";
+import CommentList from "./Comments";
 
 const SingleBlog = ({ match }) => {
   const blog = CardInfos.find((card) => card.id === parseInt(match.params.id));
@@ -105,7 +106,7 @@ const SingleBlog = ({ match }) => {
       <RelatedBlogCardList />
 
       <footer>
-        <div>comments</div>
+        <CommentList />
         <div>blogs req</div>
       </footer>
     </>

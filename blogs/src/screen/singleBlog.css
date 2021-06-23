@@ -32,7 +32,8 @@ header {
   width: 100vw;
   max-height: 23em;
   filter: blur(2px);
-  filter: contrast(30%);
+  opacity: 0.2;
+  /* filter: contrast(30%); */
   /* filter: grayscale(100%); */
 }
 .auther {
