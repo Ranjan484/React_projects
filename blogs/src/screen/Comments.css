@@ -30,8 +30,8 @@
   top: 1rem;
   left: 1.3rem;
   margin-top: 1rem;
-  height: auto;
-  width: 3vw;
+  height: 2.6rem;
+  width: auto;
   border-radius: 5px;
   background: hsl(210, 36%, 96%);
 }
@@ -44,7 +44,7 @@
   position: relative;
   /* border: 1px solid rgb(134, 150, 131); */
   border-radius: 20px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .comment-person {
   font-size: 1rem;
@@ -86,22 +86,24 @@
   z-index: 1;
   top: -6rem;
   right: 0rem;
-  left: 47rem;
+  left: 50vw;
   bottom: 0rem;
 }
 .comment-heartFill {
   font-size: 1rem;
   cursor: pointer;
+  visibility: visible;
   z-index: 2;
   color: crimson;
   position: relative;
   top: -6rem;
   right: 0rem;
-  left: 46rem;
+  left: 49vw;
   bottom: 0rem;
 }
 .hide-comment-heartFill {
   z-index: 1;
+  visibility: hidden;
   /* transition: all 0.3s linear; */
 }
 
@@ -113,7 +115,7 @@
   position: relative;
   top: -6rem;
   right: 0rem;
-  left: 47rem;
+  left: 51vw;
   bottom: 0rem;
 }
 .comment-reply-container {
@@ -151,8 +153,8 @@
   top: 1rem;
   left: 1.3rem;
   margin-top: 1rem;
-  height: auto;
-  width: 3vw;
+  height: 2.6rem;
+  width: auto;
   border-radius: 5px;
   background: hsl(210, 36%, 96%);
 }
@@ -163,7 +165,7 @@
   position: relative;
   top: -11.8rem;
   right: 0rem;
-  left: 46rem;
+  left: 50vw;
   bottom: 0rem;
 }
 .comment-three-dots-container {
@@ -171,18 +173,149 @@
   height: 6.5rem;
   background: hsl(210, 36%, 96%);
   z-index: 2;
+  visibility: visible;
   position: relative;
   top: -18rem;
   right: 0rem;
-  left: 39rem;
+  left: 36.5rem;
   bottom: 0rem;
 }
 .hide-comment-three-dots-container {
   z-index: -2;
+  visibility: hidden;
 }
 .comment-three-dots-container p {
   font-size: 0.8rem;
   line-height: 0.5rem;
   border-radius: 10px;
-  /* margin: 1rem; */
+  margin-left: 0.7rem;
+  display: inline-block;
 }
+
+@media screen and (max-width: 700px) {
+  .comment-input-container {
+    width: 80vw;
+  }
+  .comment-container {
+    margin: 2rem auto;
+    height: 7rem;
+    width: 80vw;
+    background: #fff;
+    position: relative;
+    /* border: 1px solid rgb(134, 150, 131); */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .comment-person {
+    font-size: 0.7rem;
+    width: 2rem;
+    text-transform: uppercase;
+    display: inline;
+    position: relative;
+    top: 0rem;
+    right: 0;
+    left: 5rem;
+    bottom: 0rem;
+  }
+  .comment-date {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 0rem;
+    right: 0;
+    left: 5rem;
+    bottom: 0rem;
+  }
+  .comment-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: -3.3rem;
+    left: 0.5rem;
+  }
+  .comment-text {
+    font-size: 0.6rem;
+    width: 59vw;
+    position: relative;
+    top: -5rem;
+    left: 5rem;
+    right: 0;
+    bottom: 0;
+  }
+  .comment-three-dots {
+    top: -8.8rem;
+    left: 59vw;
+  }
+  .comment-three-dots-container {
+    width: 6rem;
+    height: 6.5rem;
+    position: relative;
+    top: -14rem;
+    right: 0rem;
+    left: 46vw;
+    bottom: 0rem;
+    z-index: 5;
+  }
+  .comment-three-dots-container p {
+    font-size: 0.5rem;
+  }
+  .comment-reply {
+    top: -4.5rem;
+    left: 59vw;
+  }
+  .comment-reply-container {
+    position: relative;
+    top: -14rem;
+
+    height: 5rem;
+    width: 70vw;
+  }
+  .comment-input-reply {
+    height: 2rem;
+    width: 40vw;
+  }
+  .comment-send-reply {
+    top: 0.5rem;
+    left: 2rem;
+    margin-top: 1rem;
+    height: 1.6rem;
+    width: auto;
+  }
+  .comment-heart {
+    top: -4.5rem;
+    left: 58vw;
+  }
+  .comment-heartFill {
+    top: -4.5rem;
+    left: 56vw;
+  }
+}
+/* @media screen and (min-width: 992px) {
+  .comment-three-dots {
+    position: relative;
+    top: -11.8rem;
+    right: 0rem;
+    left: 50vw;
+    bottom: 0rem;
+  }
+  .comment-reply {
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    top: -6rem;
+    right: 0rem;
+    left: 51vw;
+    bottom: 0rem;
+  }
+  .comment-heart {
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    top: -6rem;
+    right: 0rem;
+    left: 50vw;
+    bottom: 0rem;
+  }
+} */
