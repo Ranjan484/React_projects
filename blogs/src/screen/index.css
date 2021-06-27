@@ -15,6 +15,7 @@ body {
   color: hsl(209, 61%, 16%);
   line-height: 1.5;
   font-size: 0.875rem;
+  scroll-behavior: smooth;
 }
 ul {
   list-style-type: none;
@@ -115,9 +116,9 @@ body {
 
 /* ---FOR NAVBAR--- */
 .nav_links {
-  font-size: 1rem;
+  font-size: 0.7rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 1rem auto 0 auto;
   cursor: pointer;
 }
@@ -128,19 +129,37 @@ body {
 .nav_links li a:hover {
   color: #34d399;
 }
-.navUnderline {
+.navUnderlineContainer {
   height: 0.5em;
   width: 100%;
   margin-top: 0.5em;
   background: rgb(212, 212, 212);
 }
-.navUnderline div {
+.navUnderline {
   height: 0.5em;
-  width: 17%;
+  width: 12vw;
   background: #34d399;
-  transform: translateX(47%);
+  transform: translateX(6.5vw);
+  transition: all linear 1000ms;
 }
-@media screen and (min-width: 992px) {
+
+/* FOR ANIMATION */
+.all-navUnderline {
+  transform: translateX(6.5vw);
+}
+.admin-navUnderline {
+  transform: translateX(21.5vw);
+}
+.students-navUnderline {
+  transform: translateX(40.5vw);
+}
+.teachers-navUnderline {
+  transform: translateX(60vw);
+}
+.users-navUnderline {
+  transform: translateX(77.5vw);
+}
+@media screen and (min-width: 892px) {
   .nav_links {
     font-size: 1rem;
     display: flex;
@@ -148,10 +167,25 @@ body {
     cursor: pointer;
   }
   .nav_links li {
-    margin: 0 3rem;
+    margin: 0 3vw;
   }
-  .navUnderline div {
-    transform: translateX(20em);
+  .navUnderline {
+    width: 7vw;
+  }
+  .all-navUnderline {
+    transform: translateX(23vw);
+  }
+  .admin-navUnderline {
+    transform: translateX(33vw);
+  }
+  .students-navUnderline {
+    transform: translateX(44.5vw);
+  }
+  .teachers-navUnderline {
+    transform: translateX(56.5vw);
+  }
+  .users-navUnderline {
+    transform: translateX(67.5vw);
   }
 }
 

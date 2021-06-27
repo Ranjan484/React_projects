@@ -1,4 +1,4 @@
-import CardInfos from "../data/cardInfo";
+// import CardInfos from "../data/cardInfo";
 import { Link } from "react-router-dom";
 
 const BlogCard = (props) => {
@@ -34,8 +34,8 @@ const BlogCard = (props) => {
   );
 };
 
-function BlogCardList() {
-  const newList = CardInfos.map((card) => {
+function BlogCardList(props) {
+  const newList = props.cards.map((card) => {
     return <BlogCard key={card.id} {...card} />;
   });
 
