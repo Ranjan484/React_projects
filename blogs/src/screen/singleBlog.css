@@ -15,6 +15,7 @@ body {
   color: hsl(209, 61%, 16%);
   line-height: 1.5;
   font-size: 0.875rem;
+  /* margin: 3rem auto; */
 }
 ul {
   list-style-type: none;
@@ -60,19 +61,24 @@ header {
 }
 
 .body-img {
-  width: 78vw;
-  max-height: 70vh;
+  width: 58vw;
+  max-height: 50vh;
   display: block;
   margin: 1rem auto;
 }
+.blog-heading {
+  margin: 2rem 5rem;
+  font-size: 1.8rem;
+}
 .paragraph {
-  margin: 1rem 3rem;
+  margin: 1rem 5rem;
   text-align: start;
 }
 .list-container {
   margin: 1.4rem 6.5rem;
-  list-style-type: lower-roman;
+  list-style-type: lower-alpha;
   text-align: justify;
+  background: rgba(22, 200, 150, 0.2);
 }
 .list-container li {
   margin-bottom: 1rem;
@@ -80,6 +86,9 @@ header {
 }
 h2 {
   text-align: start;
+}
+.sb-highlight {
+  background: rgba(22, 200, 150, 0.2);
 }
 
 .blog-icons {
@@ -121,13 +130,13 @@ h2 {
   overflow: hidden;
 }
 .sb-top-container ul {
-  width: 28em;
+  width: 60vw;
   display: flex;
   justify-content: space-evenly;
 }
 .sb-top-container ul li {
   height: 24px;
-  width: 73px;
+  width: 8vw;
   border-radius: 3px;
   background: #fff;
   position: relative;
@@ -136,8 +145,8 @@ h2 {
 }
 .sb-card-title {
   font-size: 1.2rem;
-  height: 2.7rem;
-  width: 20em;
+  height: 4vh;
+  width: 60vw;
   margin: 1rem auto;
   text-align: center;
   margin-top: 0.5rem;
@@ -147,14 +156,14 @@ h2 {
   font-size: 0.9rem;
   height: 4rem;
   /* text-align: center; */
-  width: 28em;
+  width: 60vw;
   margin: 0 auto;
   overflow: hidden;
 }
 
 /* section */
 .section {
-  width: 100vw;
+  width: 80vw;
   margin: 3rem auto;
 
   position: relative;
@@ -164,8 +173,8 @@ h2 {
 .section-center {
   margin: 0 auto;
   margin-top: 4rem;
-  width: 28.99vw;
-  height: 33em;
+  width: 65vw;
+  height: 67vh;
   text-align: center;
   position: relative;
   display: flex;
@@ -226,17 +235,35 @@ main.nextSlide {
 }
 
 /* FOR SLIDER */
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 400px) {
   .section-center {
-    width: 77vw;
+    width: 70vw;
+    height: 28rem;
+  }
+  .section {
+    width: 95vw;
+  }
+  .sb-top-container ul {
+    width: 70vw;
+  }
+  .sb-top-container ul li {
+    width: 14vw;
+  }
+  .sb-card-title {
+    height: 6vh;
+    width: 70vw;
+  }
+  .sb-card-text {
+    height: 3rem;
+    width: 70vw;
   }
 }
 @media screen and (min-width: 700px) {
   .section {
-    width: 90vw;
+    width: 80vw;
   }
   .section-center {
-    width: 58vw;
+    width: 70vw;
   }
   .prev,
   .next {
@@ -244,10 +271,42 @@ main.nextSlide {
     height: 3rem;
     font-size: 2.5rem;
   }
+  .sb-top-container ul {
+    width: 50vw;
+  }
+  .sb-top-container ul li {
+    width: 8vw;
+  }
+  .sb-card-title {
+    height: 2rem;
+    width: 50vw;
+  }
+  .sb-card-text {
+    height: 4rem;
+    width: 50vw;
+  }
 }
 @media screen and (min-width: 992px) {
   .section-center {
-    width: 39vw;
+    width: 30vw;
+    height: 31rem;
+  }
+  .section {
+    width: 55vw;
+  }
+  .sb-top-container ul {
+    width: 30vw;
+  }
+  .sb-top-container ul li {
+    width: 8vw;
+  }
+  .sb-card-title {
+    height: 6vh;
+    width: 25vw;
+  }
+  .sb-card-text {
+    height: 4rem;
+    width: 25vw;
   }
 }
 
@@ -269,17 +328,21 @@ main.nextSlide {
     transform: translate(50%, 50%);
   }
   .paragraph {
-    margin: 0.5rem 0.5rem;
+    margin: 1rem 2rem;
     font-size: 1rem;
   }
   .list-container {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 3rem;
   }
   h2 {
     font-size: 0.5rem;
   }
-  .section-center {
-    width: 100vw;
+  .blog-heading {
+    margin: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+  .body-img {
+    width: 68vw;
   }
 }
 
@@ -300,6 +363,18 @@ main.nextSlide {
     left: 53%;
     transform: translate(50%, 50%);
   }
+  .paragraph {
+    margin: 1rem 5rem;
+    font-size: 1rem;
+  }
+  .blog-heading {
+    margin: 2rem 5rem;
+    font-size: 1.8rem;
+  }
+  .body-img {
+    width: 75vw;
+    height: 25rem;
+  }
 }
 
 /* /// FOR DESKTOP SCREEN */
@@ -307,10 +382,11 @@ main.nextSlide {
   .banner-heading {
     font-size: 2.3rem;
     position: absolute;
-    top: 20%;
-    left: 15%;
-    transform: translate(0%, 10%);
-    text-align: center;
+    top: -3vw;
+    left: 28vw;
+    width: 50vw;
+    transform: translate(0vw, 10vw);
+    line-height: 3rem;
   }
   .auther {
     font-size: 1.3rem;
@@ -321,14 +397,18 @@ main.nextSlide {
   }
   .paragraph {
     font-size: 1.3rem;
-    margin-top: 2rem;
+    margin: 1rem 10rem;
   }
   .blog-heading {
-    margin: 2rem auto;
+    margin: 3rem 10rem;
     font-size: 1.8rem;
   }
   .body-img {
-    width: 91vw;
+    width: 75vw;
+  }
+  .list-container {
+    margin: 1rem 15rem;
+    font-size: 1.1rem;
   }
   .banner-img {
     width: 100vw;
