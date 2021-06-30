@@ -4,26 +4,30 @@ import { BsHeart } from "react-icons/bs";
 import { BsHeartFill } from "react-icons/bs";
 import { BiShareAlt } from "react-icons/bi";
 import { FaRegComment } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import CardInfos from "../../data/cardInfo";
 import RelatedBlogCardList from "../../components/RelatedBlogs";
 import "./singleBlog.css";
 import CommentList from "../comments/Comments";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SingleBlog = ({ match }) => {
-  const [show, setShow] = useState(false);
+  const [showHeart, setShowHeart] = useState(false);
+  const [showSocialMedia, setShowSocialMedia] = useState(false);
   const blog = CardInfos.find((card) => card.id === parseInt(match.params.id));
 
   const handleClickHeart = () => {
-    setShow(!show);
+    setShowHeart(!showHeart);
+  };
+  const handleClickShare = () => {
+    setShowSocialMedia(!showSocialMedia);
   };
 
   const handleClickComment = () => {
-    let style = { transform: "translateY(0px)" };
-
-    window.addEventListener("scroll", (event) => {
-      style.transform = "translateY(" + "20" + "px)";
-    });
+    window.scrollTo(0, 2700);
   };
 
   return (
@@ -130,7 +134,9 @@ const SingleBlog = ({ match }) => {
             <BsHeart onClick={handleClickHeart} />
             <BsHeartFill
               className={
-                show ? "blog-icons-bsHeartFill" : "hide-blog-icons-bsHeartFill"
+                showHeart
+                  ? "blog-icons-bsHeartFill"
+                  : "hide-blog-icons-bsHeartFill"
               }
               onClick={handleClickHeart}
             />
@@ -142,9 +148,37 @@ const SingleBlog = ({ match }) => {
             />
           </li>
           <li>
-            <BiShareAlt className="blog-icons-biShareAlt" />
+            <BiShareAlt
+              className="blog-icons-biShareAlt"
+              onClick={handleClickShare}
+            />
           </li>
         </ul>
+        <div>
+          <ul
+            className={
+              showSocialMedia
+                ? "sb-social-media-icons"
+                : "hide-sb-social-media-icons"
+            }
+          >
+            <li>
+              <Link to="www.facebook.com">
+                <FaFacebook />
+              </Link>
+            </li>
+            <li>
+              <Link to="www.twitter.com">
+                <FaTwitter />
+              </Link>
+            </li>
+            <li>
+              <Link to="www.linkedin.com">
+                <FaLinkedin />
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
       <RelatedBlogCardList />
 
