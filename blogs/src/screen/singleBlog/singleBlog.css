@@ -92,17 +92,35 @@ h2 {
 }
 
 .blog-icons {
+  margin-left: 10rem;
   height: 4rem;
-  width: 8rem;
+  width: 16rem;
+  position: relative;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: center;
 }
 .blog-icons li {
-  color: orange;
+  font-size: 2rem;
+  margin-right: 5vw;
   display: block;
+  cursor: pointer;
+}
+.blog-icons-bsHeartFill {
+  position: absolute;
+  color: crimson;
+  top: 0.8rem;
+  left: 0vw;
+}
+.hide-blog-icons-bsHeartFill {
+  display: none;
 }
 
+.blog-icons-faRegComment {
+}
+.blog-icons-biShareAlt {
+}
+/* slider container */
 .sb-container {
   margin: 2rem 2rem;
   display: flex;
@@ -344,6 +362,9 @@ main.nextSlide {
   .body-img {
     width: 68vw;
   }
+  .blog-icons {
+    margin-left: 2rem;
+  }
 }
 
 /* /// FOR TABLET SCREEN */
@@ -374,6 +395,9 @@ main.nextSlide {
   .body-img {
     width: 75vw;
     height: 25rem;
+  }
+  .blog-icons {
+    margin-left: 5rem;
   }
 }
 
@@ -413,5 +437,8 @@ main.nextSlide {
   .banner-img {
     width: 100vw;
     margin-right: -2rem;
+  }
+  .blog-icons {
+    margin-left: 10rem;
   }
 }

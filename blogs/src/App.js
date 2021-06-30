@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./screen/Home_screen";
-import SingleBlog from "./screen/SingleBlogScreen";
+import Home from "./screen/homeScreen/Home_screen";
+import SingleBlog from "./screen/singleBlog/SingleBlogScreen";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import commentsDt from "../data/commentsDt";
+import commentsDt from "../../data/commentsDt";
 import { BsHeart } from "react-icons/bs";
 import { BsHeartFill } from "react-icons/bs";
 import { BiShareAlt } from "react-icons/bi";

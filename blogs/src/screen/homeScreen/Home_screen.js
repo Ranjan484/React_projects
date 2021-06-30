@@ -1,8 +1,8 @@
-import BodyNav from "../components/bodyNav";
-import BlogCardList from "../components/BlogCard";
+import BodyNav from "../../components/bodyNav";
+import BlogCardList from "../../components/BlogCard";
 import "./index.css";
 import { useState } from "react";
-import CardInfos from "../data/cardInfo";
+import CardInfos from "../../data/cardInfo";
 
 const Home = () => {
   const [cards, setCards] = useState(CardInfos);

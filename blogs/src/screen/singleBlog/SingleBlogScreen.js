@@ -1,12 +1,31 @@
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { RiDoubleQuotesR } from "react-icons/ri";
-import CardInfos from "../data/cardInfo";
-import RelatedBlogCardList from "../components/RelatedBlogs";
+import { BsHeart } from "react-icons/bs";
+import { BsHeartFill } from "react-icons/bs";
+import { BiShareAlt } from "react-icons/bi";
+import { FaRegComment } from "react-icons/fa";
+import CardInfos from "../../data/cardInfo";
+import RelatedBlogCardList from "../../components/RelatedBlogs";
 import "./singleBlog.css";
-import CommentList from "./Comments";
+import CommentList from "../comments/Comments";
+import { useState } from "react";
 
 const SingleBlog = ({ match }) => {
+  const [show, setShow] = useState(false);
   const blog = CardInfos.find((card) => card.id === parseInt(match.params.id));
+
+  const handleClickHeart = () => {
+    setShow(!show);
+  };
+
+  const handleClickComment = () => {
+    let style = { transform: "translateY(0px)" };
+
+    window.addEventListener("scroll", (event) => {
+      style.transform = "translateY(" + "20" + "px)";
+    });
+  };
+
   return (
     <>
       <header>
@@ -104,17 +123,26 @@ const SingleBlog = ({ match }) => {
           applications, developing problem-solving skills, and sometimes even
           the opportunity to work from home. We hope we convinced you to start
           learning to code.
-          <strong style={{ textDecoration: "italic" }}> Happy coding!</strong>
+          <strong style={{ textDecoration: "Italic" }}> Happy coding!</strong>
         </p>
         <ul className="blog-icons">
           <li>
-            <i className="fa fa-heart-o" aria-hidden="false"></i>
+            <BsHeart onClick={handleClickHeart} />
+            <BsHeartFill
+              className={
+                show ? "blog-icons-bsHeartFill" : "hide-blog-icons-bsHeartFill"
+              }
+              onClick={handleClickHeart}
+            />
           </li>
           <li>
-            <i class="fa fa-commenting-o" aria-hidden="false"></i>
+            <FaRegComment
+              className="blog-icons-faRegComment"
+              onClick={handleClickComment}
+            />
           </li>
           <li>
-            <i className="fa fa-share" aria-hidden="true"></i>
+            <BiShareAlt className="blog-icons-biShareAlt" />
           </li>
         </ul>
       </div>
