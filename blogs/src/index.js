@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./reviews/App";
-import "./reviews/3index.css";
+import App from "./accordion/App";
+import "./accordion/4index.css";
 
 ReactDOM.render(
   <React.StrictMode>
